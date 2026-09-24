@@ -1,0 +1,83 @@
+# ============================================================================
+# MARKED BY FATE: Spiral Kingdom canon (source of truth for the checker)
+# ============================================================================
+# Fill this in from the Character Bible, family trees and canon docs.
+# Anything left empty is skipped. The checker never guesses.
+# See examples/sample-canon.yaml for a filled-in reference.
+#
+# After editing, run:
+#   python canon_checker/canon_check.py validate --canon canon/marked-by-fate/canon.yaml
+# ============================================================================
+
+series: Marked By Fate
+setting: Spiral Kingdom
+
+# --- TIMELINE ---------------------------------------------------------------
+# Ordered, earliest first. Chapters point at an id with front matter:
+#   ---
+#   when: <timeline id>
+#   ---
+# `year` is optional; with a character's `born`, it lets the checker compute ages.
+timeline: []
+#  - { id: book1-opening, label: "Book 1 opening", year: 0 }
+
+# --- CHARACTERS -------------------------------------------------------------
+# name           Full canonical name (exact spelling).
+# aliases        Nicknames, short names, epithets. First name is added
+#                automatically if no other character shares it.
+# born           Year (pairs with timeline year for age checks), OR
+# ages           { timeline_id: age } for exact ages at specific points.
+# status         alive | dead
+# died_at        Timeline id of death. Appearances after this get flagged.
+# first_appears  Timeline id of first on-page appearance.
+# traits         Physical facts: eyes, hair, plus anything you add to trait_vocab.
+# titles         { timeline_id: Title } is the title in effect from that point on.
+# relations      { mother: Name, brother: [Name, Name], mate: Name, ... }
+#                Keys: mother father brother sister son daughter husband wife
+#                uncle aunt cousin niece nephew grandmother grandfather twin
+#                betrothed mate stepmother stepfather half-brother half-sister
+#                guardian ward
+# voice          Notes for the skill's voice review (speech patterns, tics, what
+#                they would never say).
+# arc            Notes for the skill: relationship/emotional state by era.
+characters: []
+#  - name: ""
+#    aliases: []
+#    born:
+#    status: alive
+#    died_at:
+#    first_appears:
+#    traits: { eyes: "", hair: "" }
+#    titles: {}
+#    relations: {}
+#    voice: ""
+#    arc: {}
+
+# --- PLACES -----------------------------------------------------------------
+places: []
+
+# --- TERMS ------------------------------------------------------------------
+# canonical  Proper nouns / invented words with exact spelling and casing.
+# banned     wrong -> right. Anything retconned or commonly mistyped.
+# ignore     Capitalised words the spelling check should never flag.
+terms:
+  canonical: [Spiral Kingdom]
+  banned: {}
+  ignore: [Chapter]
+
+# --- EXTRA TRAITS -----------------------------------------------------------
+# Teach the checker new physical traits, e.g. fate marks:
+#  mark: { keywords: [mark, sigil], values: [spiral, crescent, thorn] }
+trait_vocab: {}
+
+# --- WORLD RULES (skill review) ------------------------------------------------
+# Plain-language rules the skill checks scenes against (magic limits, politics,
+# how bonds/marks work, what's impossible).
+world_rules: []
+
+# --- KNOWLEDGE (skill review) --------------------------------------------------
+# Secrets and reveals: who knows what, from when. Catches characters acting
+# on information they don't have yet.
+knowledge: []
+#  - fact: ""
+#    revealed: { Character Name: timeline_id }

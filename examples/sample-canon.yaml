@@ -1,0 +1,49 @@
+# Example canon for a made-up series, used by the tests and the README demo.
+series: The Glass Tide
+
+timeline:
+  - { id: prologue,    label: Prologue,        year: 1195 }
+  - { id: coronation,  label: The Coronation,  year: 1200 }
+  - { id: siege,       label: Siege of Harrowmere, year: 1202 }
+  - { id: aftermath,   label: Aftermath,       year: 1203 }
+
+characters:
+  - name: Maren Vale
+    aliases: [Mare]
+    born: 1180
+    traits: { eyes: green flecked with gold, hair: black }
+    titles: { prologue: Lady, coronation: Queen }
+    relations: { brother: Corin Vale, mother: Elsabet Vale }
+    voice: Clipped, formal in court; dry humour with Corin.
+
+  - name: Corin Vale
+    born: 1183
+    status: dead
+    died_at: siege
+    traits: { eyes: gray }
+    relations: { sister: Maren Vale, mother: Elsabet Vale }
+
+  - name: Elsabet Vale
+    traits: { hair: silver }
+    titles: { prologue: Queen, coronation: Dowager }
+    relations: { son: Corin Vale, daughter: Maren Vale }
+
+  - name: Tavish Rook
+    first_appears: siege
+    ages: { siege: 24 }
+
+places: [Harrowmere, Saltspire]
+
+terms:
+  canonical: [Glass Tide, Tidecaller, Saltspire Keep]
+  banned:
+    Glass Sea: Glass Tide
+    tide-caller: Tidecaller
+  ignore: [Chapter]
+
+world_rules:
+  - Tidecallers cannot work magic on dry land.
+
+knowledge:
+  - fact: Corin is the true heir.
+    revealed: { Maren Vale: aftermath }
