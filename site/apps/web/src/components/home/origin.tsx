@@ -1,0 +1,5 @@
+import { SpiralSeal } from '@/components/spiral-seal';
+
+export function Origin() {
+  return <section className="origin-section" id="the-mark"><div className="section-rule"><span>CHAPTER I</span><span>THE AWAKENING</span></div><div className="origin-content"><div className="origin-side"><span className="vertical-label">THE DAY EVERYTHING CHANGED</span><span className="origin-index">I.</span></div><div className="origin-main"><p className="eyebrow">THE BEGINNING</p><h2>It started with <em>a spiral.</em></h2><p className="origin-lead">On June 3, 2019, the Moon Goddess placed a small spiral on the left wrist of the chosen.</p><p>No thunder. No prophecy spoken aloud. Only a quiet sign, and the first step into a world that had always been there — waiting just beyond sight.</p><div className="origin-date"><span className="date-line" /><span>03 <i>/</i> 06 <i>/</i> 2019</span><small>THE FIRST MARKING</small></div></div><div className="origin-glyph"><SpiralSeal className="origin-seal" /><span>THE SPIRAL MARK</span></div></div></section>;
+}

@@ -2,3 +2,7 @@ __pycache__/
 *.pyc
 reports/*
 !reports/.gitkeep
+
+# Horizons site: local secrets and PocketBase runtime data stay out of git
+site/apps/web/.env
+site/apps/pocketbase/pb_data/
