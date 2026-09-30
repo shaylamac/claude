@@ -6,3 +6,6 @@ reports/*
 # Horizons site: local secrets and PocketBase runtime data stay out of git
 site/apps/web/.env
 site/apps/pocketbase/pb_data/
+site/node_modules/
+site/dist/
+site/apps/web/.react-router/
